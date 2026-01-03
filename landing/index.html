@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset CLI - 规划你的晚间时光</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ambient-glow"></div>
+    <div class="stars"></div>
+
+    <header>
+        <nav>
+            <div class="logo">sunset<span class="highlight">cli</span></div>
+            <div class="links">
+                <a href="#features">功能特性</a>
+                <a href="#how-it-works">如何使用</a>
+                <a href="https://github.com/cerebralatlas/sunset-cli" target="_blank" class="btn-secondary">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>重掌你的 <span class="gradient-text">晚间时光</span></h1>
+                <p class="subtitle">一个极简的生产力 CLI，助你规划下班后的时间，找回生活节奏。</p>
+                <div class="cta-group">
+                    <button class="btn-primary" onclick="document.getElementById('install').scrollIntoView({behavior: 'smooth'})">立即开始</button>
+                    <div class="command-copy">
+                        <code>bun install sunset-cli</code>
+                        <button class="copy-btn" aria-label="复制命令">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="traffic-lights">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
+                    <div class="terminal-title">sunset-cli — bash — 80x24</div>
+                </div>
+                <div class="terminal-body">
+                    <div id="typewriter"></div>
+                    <span class="cursor">_</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="feature-card glass">
+                <div class="icon">✨</div>
+                <h3>极简设计</h3>
+                <p>告别繁杂菜单。三个简单问题，助你聚焦今晚的核心目标。</p>
+            </div>
+            <div class="feature-card glass">
+                <div class="icon">🚀</div>
+                <h3>飞书集成</h3>
+                <p>将计划以交互卡片形式推送到飞书。让目标触手可及。</p>
+            </div>
+            <div class="feature-card glass">
+                <div class="icon">⚡</div>
+                <h3>极速体验</h3>
+                <p>基于 Bun 构建。瞬间启动，零延迟。因为你的时间无比珍贵。</p>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="showcase">
+            <h2>如何使用</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>规划</h3>
+                        <p>下班前在终端运行 <code>sunset plan</code>。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>聚焦</h3>
+                        <p>回答三个引导性问题，确立今晚意图。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>执行</h3>
+                        <p>手机收到精美摘要卡片，助你按部就班。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="install" class="installation">
+            <h2>准备好了吗？</h2>
+            <div class="code-block glass">
+                <pre><code><span class="comment"># 安装依赖</span>
+bun install
+
+<span class="comment"># 配置 Webhook</span>
+cp .env.example .env
+
+<span class="comment"># 开始规划</span>
+bun run index.ts plan</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sunset CLI. 为有思想的开发者打造。</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
